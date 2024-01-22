@@ -11,3 +11,7 @@ process.stdin.on('data', function (data) {
     if (err) throw err;
   });
 });
+
+process.on('exit', () =>
+  process.stdout.write('Closing the session. Goodbye!\n'),
+);
