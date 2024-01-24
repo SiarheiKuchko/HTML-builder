@@ -15,3 +15,4 @@ process.stdin.on('data', function (data) {
 process.on('exit', () =>
   process.stdout.write('Closing the session. Goodbye!\n'),
 );
+process.on('SIGINT', () => process.exit());
